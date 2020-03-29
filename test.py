@@ -28,6 +28,12 @@ class Formater(metaclass = ABCMeta):
     
 
 def main():
+
+    format = FormatManager()
+    format.load("table.json")
+    format.set('tilte', 'abcdefg')
+    format.generate()
+    format.to_json()
     
     table = TableFormat()
     table.set()
